@@ -1,0 +1,26 @@
+name: Tests
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    lint-prettier:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - name: Check code
+              run: |
+                  yarn install
+                  yarn format
+                  yarn lint
+    jest:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - name: Run Tests
+              run: |
+                  yarn install
+                  yarn test
