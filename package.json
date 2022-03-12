@@ -1,6 +1,6 @@
 {
     "name": "@xesacat/enver",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A tool that automatically loads values from env files",
     "author": "XesaCat",
     "license": "Apache-2.0",
