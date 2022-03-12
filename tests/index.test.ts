@@ -72,22 +72,6 @@ describe("initConfig", () => {
             expect(testFunction).toThrowError("Filename must only have lowercase letters and end with .env");
         });
 
-        it("should throw on invalid 'title'", () => {
-            function testFunction(): unknown {
-                return new Enver({
-                    configEntries: [
-                        {
-                            ...validEnverConfig.configEntries[0],
-                            title: "7357 717L3",
-                        },
-                    ],
-                    file: validEnverConfig.file,
-                }).initConfig();
-            }
-
-            expect(testFunction).toThrowError("Invalid value for 'title'. May only have letters and spaces.");
-        });
-
         it("should throw on invalid 'name'", () => {
             function testFunction(): unknown {
                 return new Enver({

@@ -48,8 +48,6 @@ export class Enver {
 
         const seenEntryNames: string[] = [];
         this.configEntries.forEach((entry) => {
-            if (!entry.title.match(/^[A-Z ]+$/i))
-                throw new Error("Invalid value for 'title'. May only have letters and spaces.");
             if (!entry.name.match(/[A-Z_]+/))
                 throw new Error("Invalid value for 'name'. May only have uppercase letters and underscores");
             if (seenEntryNames.includes(entry.name)) throw new Error(`Duplicate entry '${entry.name}'`);
