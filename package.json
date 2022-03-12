@@ -30,8 +30,10 @@
         "test": "yarn jest"
     },
     "lint-staged": {
+        "*": [
+            "yarn format"
+        ],
         "*.{js,ts}": [
-            "yarn format",
             "yarn lint",
             "yarn test"
         ]
