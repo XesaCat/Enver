@@ -20,7 +20,7 @@
     "engines": {
         "node": ">=16.13.2"
     },
-    "packageManager": "yarn@1.22.17",
+    "packageManager": "yarn@3.2.0",
     "scripts": {
         "build": "tsc --build",
         "format": "prettier -c . --write",
